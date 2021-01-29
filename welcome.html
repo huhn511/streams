@@ -1,0 +1,341 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Welcome - IOTA Streams</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="welcome.html" class="active"><strong aria-hidden="true">1.</strong> Welcome</a></li><li class="chapter-item expanded "><a href="overview/index.html"><strong aria-hidden="true">2.</strong> Overview</a></li><li class="chapter-item expanded "><a href="libraries/index.html"><strong aria-hidden="true">3.</strong> Libraries</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="libraries/rust/index.html"><strong aria-hidden="true">3.1.</strong> Rust</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="libraries/rust/getting_started.html"><strong aria-hidden="true">3.1.1.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="libraries/rust/soon.html"><strong aria-hidden="true">3.1.2.</strong> Examples</a></li><li class="chapter-item expanded "><a href="libraries/rust/api-reference.html"><strong aria-hidden="true">3.1.3.</strong> API Reference</a></li><li class="chapter-item expanded "><a href="libraries/rust/soon.html"><strong aria-hidden="true">3.1.4.</strong> Troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="libraries/wasm/index.html"><strong aria-hidden="true">3.2.</strong> WASM</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="libraries/wasm/getting_started.html"><strong aria-hidden="true">3.2.1.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="libraries/wasm/soon.html"><strong aria-hidden="true">3.2.2.</strong> Examples</a></li><li class="chapter-item expanded "><a href="libraries/wasm/api-reference.html"><strong aria-hidden="true">3.2.3.</strong> API Reference</a></li><li class="chapter-item expanded "><a href="libraries/wasm/soon.html"><strong aria-hidden="true">3.2.4.</strong> Troubleshooting</a></li></ol></li><li class="chapter-item expanded "><a href="libraries/nodejs/index.html"><strong aria-hidden="true">3.3.</strong> Node.js</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="libraries/nodejs/getting_started.html"><strong aria-hidden="true">3.3.1.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="libraries/nodejs/soon.html"><strong aria-hidden="true">3.3.2.</strong> Examples</a></li><li class="chapter-item expanded "><a href="libraries/nodejs/api-reference.html"><strong aria-hidden="true">3.3.3.</strong> API Reference</a></li><li class="chapter-item expanded "><a href="libraries/nodejs/soon.html"><strong aria-hidden="true">3.3.4.</strong> Troubleshooting</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="contribute.html"><strong aria-hidden="true">4.</strong> Contribute</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">IOTA Streams</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#iota-streams" id="iota-streams">IOTA Streams</a></h1>
+<h1 align="center">
+  <br>
+  <a href="https://docs.iota.org/docs/iota-streams/1.1/overview"><img src="streams.png"></a>
+</h1>
+<h2 align="center">A cryptographic framework for building secure messaging protocols</h2>
+<p align="center">
+    <a href="https://docs.iota.org/docs/iota-streams/1.1/overview" style="text-decoration:none;">
+    <img src="https://img.shields.io/badge/Documentation%20portal-blue.svg?style=for-the-badge"
+         alt="Developer documentation portal">
+      </p>
+<p align="center">
+	<a href="https://discord.iota.org/" style="text-decoration:none;"><img src="https://img.shields.io/badge/Discord-9cf.svg?logo=discord" alt="Discord"></a>
+    <a href="https://iota.stackexchange.com/" style="text-decoration:none;"><img src="https://img.shields.io/badge/StackExchange-9cf.svg?logo=stackexchange" alt="StackExchange"></a>
+    <a href="https://raw.githubusercontent.com/iotaledger/streams/master/LICENSE" style="text-decoration:none;"><img src="https://img.shields.io/badge/license-Apache%202.0-green.svg" alt="Apache 2.0 license"></a>
+</p>
+<p align="center">
+  <a href="#about">About</a> ◈
+  <a href="#prerequisites">Prerequisites</a> ◈
+  <a href="#installation">Installation</a> ◈
+  <a href="#getting-started">Getting started</a> ◈
+  <a href="#api-reference">API reference</a> ◈
+  <a href="#examples">Examples</a> ◈
+  <a href="#supporting-the-project">Supporting the project</a> ◈
+  <a href="#joining-the-discussion">Joining the discussion</a> 
+</p>
+<hr />
+<h2><a class="header" href="#about" id="about">About</a></h2>
+<p>IOTA Streams is a <strong>work-in-progress</strong> framework for building cryptographic messaging protocols. Streams ships with a built-in protocol called Channels for sending authenticated messages between two or more parties on the Tangle.</p>
+<p>As a framework, Streams allows developers to build protocols for their specific needs.</p>
+<p>This process will be documented as the development progresses. However, since this crate is in an alpha stage of development it is still likely to change.</p>
+<p>At the moment, IOTA Streams includes the following crates:</p>
+<ul>
+<li><a href="iota-streams-app-channels/README.html">Channels Application</a> featuring Channels Application.</li>
+<li><a href="iota-streams-core/README.html">Core layers</a> featuring spongos automaton for sponge-based authenticated encryption, pre-shared keys, pseudo-random generator;</li>
+<li><a href="iota-streams-core-keccak/README.html">Keccak for core layers</a> featuring Keccak-F[1600] as spongos transform;</li>
+<li><a href="iota-streams-core-edsig/README.html">Curve25519 asymmetric crypto</a> featuring Ed25519 signature and X25519 key exchange;</li>
+<li><a href="iota-streams-ddml/README.html">DDML</a> featuring data definition and manipulation language for protocol messages;</li>
+<li><a href="iota-streams-app/README.html">Application layer</a> common Application definitions.</li>
+<li><a href="bindings/c/README.html">Bindings</a>.</li>
+</ul>
+<h2><a class="header" href="#prerequisites" id="prerequisites">Prerequisites</a></h2>
+<p>To use IOTA Streams, you need the following:</p>
+<ul>
+<li><a href="https://www.rust-lang.org/tools/install">Rust</a></li>
+<li>(Optional) An IDE that supports Rust autocompletion. We recommend <a href="https://code.visualstudio.com/Download">Visual Studio Code</a> with the <a href="https://marketplace.visualstudio.com/items?itemName=matklad.rust-analyzer">rust-analyzer</a> extension</li>
+</ul>
+<p>We also recommend updating Rust to the <a href="https://github.com/rust-lang/rustup.rs#keeping-rust-up-to-date">latest stable version</a>:</p>
+<pre><code class="language-bash">rustup update stable
+</code></pre>
+<h2><a class="header" href="#installation" id="installation">Installation</a></h2>
+<p>To use the library in your crate you need to add it as a dependancy in the <code>Cargo.toml</code> file.</p>
+<p>Because the library is not on <a href="https://crates.io/">crates.io</a>, you need to use the Git repository either remotely or locally.</p>
+<p><code>no_std</code> is currently supported. However cargo nightly must be used to build with <code>no_std</code> feature.</p>
+<h2><a class="header" href="#getting-started" id="getting-started">Getting started</a></h2>
+<p>If you don't have a rust project setup yet you can create one by running,</p>
+<pre><code>cargo new my-library
+</code></pre>
+<p><strong>Remote</strong>
+Add the following to your <code>Cargo.toml</code> file:</p>
+<pre><code class="language-bash">[dependencies]
+anyhow = { version = &quot;1.0&quot;, default-features = false }
+iota-streams = { git = &quot;https://github.com/iotaledger/streams&quot;, branch  = &quot;master&quot;}
+</code></pre>
+<p><strong>Local</strong></p>
+<ol>
+<li>
+<p>Clone this repository</p>
+<pre><code class="language-bash">git clone https://github.com/iotaledger/streams
+</code></pre>
+</li>
+<li>
+<p>Add the following to your <code>Cargo.toml</code> file:</p>
+<pre><code class="language-bash">[dependencies]
+iota-streams = { version = &quot;1.0.0&quot;, path = &quot;../streams&quot; }
+</code></pre>
+</li>
+</ol>
+<h2><a class="header" href="#getting-started-1" id="getting-started-1">Getting started</a></h2>
+<p>After you've <a href="#installation">installed the library</a>, you can use it in your own Cargo project.</p>
+<p>For example, you may want to use the Channels protocol to create a new author and subscriber like so:</p>
+<pre><code>use iota_streams::app_channels::api::tangle::{Author, Subscriber};
+use iota_streams::app::transport::tangle::PAYLOAD_BYTES;
+use iota_streams::app::transport::tangle::client::Client;
+
+fn main() {
+    let node = &quot;http://localhost:14265&quot;;
+    let client = Client::new_from_url(node);
+
+    let encoding = &quot;utf-8&quot;;
+    let multi_branching_flag = true;
+
+    let mut author = Author::new(&quot;AUTHORSSEED&quot;, encoding, PAYLOAD_BYTES, multi_branching_flag, client);
+    
+    let mut subscriber = Subscriber::new(&quot;MYSUBSCRIBERSECRETSTRING&quot;, encoding, PAYLOAD_BYTES, client);
+}
+</code></pre>
+<p>For a more detailed guide, go to our <a href="https://docs.iota.org/docs/channels/1.3/overview">documentation portal</a>.</p>
+<h2><a class="header" href="#api-reference" id="api-reference">API reference</a></h2>
+<p>To generate the API reference and display it in a web browser, do the following:</p>
+<pre><code class="language-bash">cargo doc --open
+</code></pre>
+<h2><a class="header" href="#examples" id="examples">Examples</a></h2>
+<p>We have an example in the <a href="examples/src/main.rs"><code>examples</code> directory</a>. that you can use as a reference when developing your own protocols with IOTA Streams.</p>
+<p>A <code>no_std</code> version can be found in <a href="iota-streams-app-channels-example/src/main.rs"><code>iota-streams-app-channels-example</code> directory</a></p>
+<h2><a class="header" href="#supporting-the-project" id="supporting-the-project">Supporting the project</a></h2>
+<p>Please see our <a href="CONTRIBUTING.html">contribution guidelines</a> for all the ways in which you can contribute.</p>
+<h3><a class="header" href="#running-tests" id="running-tests">Running tests</a></h3>
+<p>We use code comments to write tests. You can run all tests by doing the following from the <code>streams</code> directory:</p>
+<pre><code>cargo test --all
+</code></pre>
+<h3><a class="header" href="#updating-documentation" id="updating-documentation">Updating documentation</a></h3>
+<p>If you want to improve the code comments, please do so according to the guidelines in <a href="https://github.com/rust-lang/rfcs/blob/master/text/1574-more-api-documentation-conventions.md#appendix-a-full-conventions-text">RFC 1574</a>.</p>
+<h2><a class="header" href="#joining-the-discussion" id="joining-the-discussion">Joining the discussion</a></h2>
+<p>If you want to get involved in discussions about this technology, or you're looking for support, go to the #streams-discussion channel on <a href="https://discord.iota.org/">Discord</a>.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+                            <a rel="next" href="overview/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+                    <a rel="next" href="overview/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
